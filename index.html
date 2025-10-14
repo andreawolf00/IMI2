@@ -1,31 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMI_2025_irccs_Bari</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IMI_2025_irccs_Bari</title>
+  <style>
+    /* --- RESET & BASE --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      color: #4CAF50;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 900px;
+      margin: 0 auto 15px auto;
+      text-align: justify;
+      font-size: 1rem;
+    }
+
+    /* --- VIDEO RESPONSIVO --- */
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* --- MOBILE --- */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        text-align: left;
+        padding: 0 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Integration of H&E and immunohistochemistry images to improve AI-based recurrence prediction in negative sentinel lymph-node melanoma patients</h1>
-	<img src="CNN_Inputs.svg">
-	<p> Input of our Model </p>
-	<video width="640" height="360" controls>
-	<source src="video.mp4" type="video/mp4">
-	</video>
+  <h1>Integration of H&E and immunohistochemistry images to improve AI-based recurrence prediction in negative sentinel lymph-node melanoma patients</h1>
+
+  <p><strong>IHC CO-REGISTRATION</strong></p>
+
+  <p>
+    Digitalized H&E-stained whole-slide images (WSIs) were acquired at 40× magnification and stored as gigapixel, multi-resolution pyramidal images to allow efficient navigation and analysis.
+    For each WSI, two expert pathologists manually annotated two distinct Regions of Interest (ROIs) directly on the H&E image:
+  </p>
+
+  <p>
+    (i) a TUMOR ROI, containing only tumor cells, and (ii) a TUMOR + INF ROI, encompassing tumor areas with adjacent or infiltrating immune cells.
+    To enable multi-staining analysis, all corresponding immunohistochemical (IHC) slides were spatially aligned to the H&E reference image using rigid and non-rigid image registration techniques,
+    ensuring accurate co-localization of tissue structures across stains.
+  </p>
+
+  <div class="video-container">
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 </body>
 </html>
-
-
-
